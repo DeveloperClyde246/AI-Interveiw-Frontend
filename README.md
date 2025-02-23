@@ -1,2 +1,2 @@
-# AI-Interveiw-Frontend
+# AI-Interview-Frontend
 AI Interview frontend

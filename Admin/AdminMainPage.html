@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GT Interview System</title>
+    <title>GIT Interview System</title>
     <link rel="stylesheet" href="AdminMainPage.css">
 </head>
 <body>
     <h1>GIT Interview System</h1>
 
+    <button onclick="viewProfile()">View profile</button>
     <button onclick="createRecruiterAccount()">Creating new recruiter account</button>
     <button onclick="deleteAccount()">Delete account</button>
 
@@ -21,6 +22,7 @@
             <th>Contact number</th>
             <th>Email</th>
             <th>Date created</th>
+            <th> </th>
         </tr>
         <tr>
             <td>#R001</td>
@@ -29,6 +31,7 @@
             <td>601746253727</td>
             <td>asdf@gmail.com</td>
             <td>01/03/2018</td>
+            <td><button onclick="deleteAccount()">info</button></td>
         </tr>
         <tr>
             <td>#R002</td>
@@ -37,6 +40,7 @@
             <td>601246253727</td>
             <td>asdfa@gmail.com</td>
             <td>01/03/2020</td>
+            <td><button onclick="deleteAccount()">info</button></td>
         </tr>
         <tr>
             <td>#R003</td>
@@ -45,6 +49,7 @@
             <td>601746433727</td>
             <td>asdfsd@gmail.com</td>
             <td>01/03/2017</td>
+            <td><button onclick="deleteAccount()">info</button></td>
         </tr>
     </table>
 
@@ -57,6 +62,8 @@
             <th>Contact number</th>
             <th>Email</th>
             <th>Date created</th>
+            <th> </th>
+
         </tr>
         <tr>
             <td>#R001</td>
@@ -65,6 +72,7 @@
             <td>601746253727</td>
             <td>asdf@gmail.com</td>
             <td>01/03/2018</td>
+            <td><button onclick="deleteAccount()">info</button></td>
         </tr>
         <tr>
             <td>#R002</td>
@@ -73,6 +81,7 @@
             <td>601246253727</td>
             <td>asdfa@gmail.com</td>
             <td>01/03/2020</td>
+            <td><button onclick="deleteAccount()">info</button></td>
         </tr>
         <tr>
             <td>#R003</td>
@@ -81,10 +90,17 @@
             <td>601746433727</td>
             <td>asdfsd@gmail.com</td>
             <td>01/03/2017</td>
+            <td><button onclick="deleteAccount()">info</button></td>
         </tr>
     </table>
 
     <script>
+        function viewProfile() {
+            alert("Creating new recruiter account...");
+            // Add functionality here
+        }
+
+
         function createRecruiterAccount() {
             alert("Creating new recruiter account...");
             // Add functionality here

@@ -30,12 +30,12 @@
             border-radius: 10px;
         }
         .form-header {
-            background: orange;
+            background: yellow;
             padding: 10px;
             font-size: 20px;
             font-weight: bold;
         }
-        .form-section, .invite-section {
+        .form-section {
             margin-top: 20px;
         }
         .form-section input, .form-section textarea {
@@ -45,7 +45,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        .form-actions, .invite-actions {
+        .form-actions {
             margin-top: 20px;
         }
         .button {
@@ -65,19 +65,6 @@
         .upload-section {
             margin-top: 10px;
         }
-        .invite-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        .invite-table th, .invite-table td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: left;
-        }
-        .invite-table th {
-            background: #d3d3d3;
-        }
     </style>
 </head>
 <body>
@@ -88,42 +75,43 @@
         <a href="#">Home</a> > <a href="#">Interviews</a> > <a href="#">Interview Form</a>
     </div>
     <div class="container">
-        <div class="form-header">Software Developer Technical Interview</div>
-        <div class="invite-section">
-            <h3>Send invite to candidates</h3>
-            <table class="invite-table">
-                <tr>
-                    <th></th>
-                    <th>Recruiter Id</th>
-                    <th>Name</th>
-                    <th>Job Applied</th>
-                    <th>Email</th>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" checked></td>
-                    <td>#R001</td>
-                    <td>John</td>
-                    <td>Software Engineer</td>
-                    <td>asdf@gmail.com</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" checked></td>
-                    <td>#R002</td>
-                    <td>Alvin</td>
-                    <td>Web Developer</td>
-                    <td>asdfa@gmail.com</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>#R003</td>
-                    <td>Tan Ke Yu</td>
-                    <td>IT Manager</td>
-                    <td>asdfsd@gmail.com</td>
-                </tr>
-            </table>
-            <div class="invite-actions">
-                <button class="button">Send Invitation</button>
+        <div class="form-header">New Form</div>
+        <div class="form-section">
+            <label for="title">Title</label>
+            <input type="text" id="title" placeholder="Enter title">
+        </div>
+        <div class="form-section">
+            <label for="description">Rules and Descriptions</label>
+            <textarea id="description" rows="5" placeholder="Enter rules and descriptions"></textarea>
+        </div>
+        
+        <div class="question-section">
+            <label>Q1.</label>
+            <input type="text" placeholder="Enter question">
+            <div class="upload-section">
+                Answer type: <button>Upload video file</button>
+                Format: .mp4, .wav, .mov
             </div>
+        </div>
+        <div class="question-section">
+            <label>Q2.</label>
+            <input type="text" placeholder="Enter question">
+            <div class="upload-section">
+                Answer type: <button>Upload video file</button>
+                Format: .mp4, .wav, .mov
+            </div>
+        </div>
+        <div class="question-section">
+            <label>Q3.</label>
+            <input type="text" placeholder="Enter question">
+            <div class="upload-section">
+                Answer type: <button>Upload video file</button>
+                Format: .mp4, .wav, .mov
+            </div>
+        </div>
+        
+        <div class="form-actions">
+            <button class="button">Create Session</button>
         </div>
     </div>
 </body>

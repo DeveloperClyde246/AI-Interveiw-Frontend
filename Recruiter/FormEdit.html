@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Interview Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .navbar {
+            background-color: #00f5ff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .breadcrumb {
+            margin: 10px;
+            font-size: 14px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .form-header {
+            background: orange;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .form-menu {
+            float: left;
+            width: 20%;
+            padding-right: 20px;
+            border-right: 2px solid #ccc;
+        }
+        .form-menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            margin-bottom: 5px;
+        }
+        .form-menu a.active {
+            color: teal;
+            font-weight: bold;
+        }
+        .form-content {
+            margin-left: 25%;
+            padding: 10px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .question-section {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .upload-section {
+            margin-top: 10px;
+        }
+        .button {
+            background: #00a2ff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>GIT Interview</h1>
+    </div>
+    <div class="breadcrumb">
+        <a href="#">Home</a> > <a href="#">Interviews</a> > <a href="#">Software Engineering</a> > <a href="#">Interview Form</a>
+    </div>
+    <div class="container">
+        <div class="form-header">Software Developer Technical Interview</div>
+        
+        <div class="form-menu">
+            <a href="#">View form</a>
+            <a href="#">Send invite</a>
+            <a href="#" class="active">Edit form</a>
+            <a href="#">Delete interview session</a>
+        </div>
+
+        <div class="form-content">
+            <input type="text" class="input-field" value="Software Developer Technical Interview">
+            <p>Duration: 1 hour &nbsp;&nbsp;&nbsp; Deadline: 21 December 2024</p>
+            <textarea class="input-field" rows="5">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </textarea>
+            <p>You only have 1 attempt.</p>
+
+            <h3>Answer form</h3>
+
+            <div class="question-section">
+                <label>Q1.</label>
+                <input type="text" class="input-field" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?">
+                <div class="upload-section">
+                    Answer type: <button>Upload video file</button>
+                    Format: .mp4, .wav, .mov
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label>Q2.</label>
+                <input type="text" class="input-field" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?">
+                <div class="upload-section">
+                    Answer type: <button>Upload video file</button>
+                    Format: .mp4, .wav, .mov
+                </div>
+            </div>
+
+            <div class="question-section">
+                <label>Q3.</label>
+                <input type="text" class="input-field" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?">
+                <div class="upload-section">
+                    Answer type: <button>Upload video file</button>
+                    Format: .mp4, .wav, .mov
+                </div>
+            </div>
+
+            <button class="button">Save edit</button>
+        </div>
+    </div>
+</body>
+</html>

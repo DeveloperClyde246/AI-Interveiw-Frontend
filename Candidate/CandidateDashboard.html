@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: cyan;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            background: #333;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .header-title {
+            flex-grow: 1; /* Pushes the title to the center */
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 20px;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100vh;
+            background: #333;
+            transition: left 0.3s ease-in-out;
+            padding-top: 60px;
+            color: white;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            padding: 15px 20px;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .sidebar ul li:hover {
+            background: #575757;
+        }
+
+        /* Hover Effect */
+        .menu-icon:hover + .sidebar,
+        .sidebar:hover {
+            left: 0;
+        }
+
+        .dashboard-container {
+            padding: 10px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+
+        .notification {
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .notification ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .notification li {
+            padding: 5px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="menu-icon">☰</div>
+        <div class="header-title">GIT Interview</div>
+        <div class="header-icons">
+            <span>🔔</span>
+            <span>⚙️</span>
+            <span>👤</span>
+        </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Upcoming Interviews</a></li>
+            <li><a href="#">Pending Tasks</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="section">
+            <h3>Upcoming Interview</h3>
+            <ul>
+                <li><strong>Software developer technical interview</strong><br>Completion Deadline: 20/12/2024 | Duration: 1 hour</li>
+                <li><strong>Software developer physical interview</strong><br>Date: 23/12/2024 | Time: 2:00pm - 3:00pm</li>
+            </ul>
+        </div>
+        <div class="section task-list">
+            <h3>Pending Tasks</h3>
+            <ul>
+                <li><a href="#">Complete your profile</a></li>
+                <li><a href="#">Upload your resume</a></li>
+                <li><a href="#">Complete "Software Technical Interview"</a></li>
+                <li><a href="#">Invitation to join Software developer technical interview</a></li>
+            </ul>
+        </div>
+        <div class="section notification">
+            <h3>Notification</h3>
+            <ul>
+                <li>Your performance for Software developer interview has been generated. Click for details.</li>
+                <li>You have been added to Software developer interview session. Click for details.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

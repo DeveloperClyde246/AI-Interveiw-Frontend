@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .navbar {
+            background-color: #00f5ff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar h1 {
+            margin: 0;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        .table th {
+            background: #d3d3d3;
+        }
+        .sort-box {
+            float: right;
+        }
+        .action-menu {
+            display: none;
+            position: absolute;
+            background: white;
+            border: 1px solid black;
+            padding: 5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+        .action-menu div {
+            padding: 5px;
+            cursor: pointer;
+        }
+        .action-menu div:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>GIT Interview System</h1>
+    </div>
+    <div class="container">
+        <h2>Software Engineer Interview</h2>
+        <div class="sort-box">
+            Sort by: 
+            <select>
+                <option>Performance mark (descending)</option>
+                <option>Performance mark (ascending)</option>
+            </select>
+        </div>
+        <table class="table">
+            <tr>
+                <th>Recruiter Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Date created</th>
+                <th>Performance mark</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>#R001</td>
+                <td>Emilia Tseng Tsu Yu</td>
+                <td>asdf@gmail.com</td>
+                <td>01/03/2018</td>
+                <td>85/100</td>
+                <td><button onclick="toggleMenu(event)">⋮</button></td>
+            </tr>
+            <tr>
+                <td>#R002</td>
+                <td>Tan Ke Yu</td>
+                <td>asdfa@gmail.com</td>
+                <td>01/03/2020</td>
+                <td>80/100</td>
+                <td><button onclick="toggleMenu(event)">⋮</button></td>
+            </tr>
+            <tr>
+                <td>#R003</td>
+                <td>Alvin Lew Xiu Zheng</td>
+                <td>asdfsd@gmail.com</td>
+                <td>01/03/2017</td>
+                <td>- /100</td>
+                <td><button onclick="toggleMenu(event)">⋮</button></td>
+            </tr>
+        </table>
+        <h2>IT Manager Interview</h2>
+        <table class="table">
+            <tr>
+                <th>Recruiter Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Date created</th>
+                <th>Performance mark</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>#R001</td>
+                <td>Emilia Tseng Tsu Yu</td>
+                <td>asdf@gmail.com</td>
+                <td>01/03/2018</td>
+                <td>95/100</td>
+                <td><button onclick="toggleMenu(event)">⋮</button></td>
+            </tr>
+            <tr>
+                <td>#R002</td>
+                <td>Tan Ke Yu</td>
+                <td>asdfa@gmail.com</td>
+                <td>01/03/2020</td>
+                <td>90/100</td>
+                <td><button onclick="toggleMenu(event)">⋮</button></td>
+            </tr>
+            <tr>
+                <td>#R003</td>
+                <td>Alvin Lew Xiu Zheng</td>
+                <td>asdfsd@gmail.com</td>
+                <td>01/03/2017</td>
+                <td>- /100</td>
+                <td><button onclick="toggleMenu(event)">⋮</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="action-menu" id="actionMenu">
+        <div>Hide user</div>
+        <div>Delete user</div>
+        <div>View detail</div>
+        <div>Generate report</div>
+    </div>
+    <script>
+        function toggleMenu(event) {
+            var menu = document.getElementById('actionMenu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            menu.style.top = event.clientY + 'px';
+            menu.style.left = event.clientX + 'px';
+        }
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('actionMenu');
+            if (!event.target.matches('button')) {
+                menu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .navbar {
+            background-color: #00f5ff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #ddd;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .actions {
+            cursor: pointer;
+            position: relative;
+        }
+        .actions-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: white;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            text-align: left;
+        }
+        .actions:hover .actions-menu {
+            display: block;
+        }
+        .actions-menu div {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .actions-menu div:hover {
+            background-color: #ddd;
+        }
+        .sort-option {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>GIT Interview System</h1>
+    </div>
+    <div class="container">
+        <h2>Software Engineer Interview</h2>
+        
+        <div class="dropdown">
+            A1 - A5
+            <div class="dropdown-content">
+                <p>A1: Technical knowledge</p>
+                <p>A2: Problem solving skills</p>
+                <p>A3: Fluency</p>
+                <p>A4: Communication skill</p>
+                <p>A5: Professionalism</p>
+            </div>
+        </div>
+        
+        <div class="sort-option">
+            Sort by: <strong>Performance mark (descending)</strong>
+        </div>
+        
+        <table>
+            <tr>
+                <th>Recruiter Id</th>
+                <th>Name</th>
+                <th>A1</th>
+                <th>A2</th>
+                <th>A3</th>
+                <th>A4</th>
+                <th>A5</th>
+                <th>Final mark</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>#R001</td>
+                <td>Emilia Tseng Tsu Yu</td>
+                <td>85</td>
+                <td>85</td>
+                <td>85</td>
+                <td>85</td>
+                <td>85</td>
+                <td>85/100</td>
+                <td class="actions">⋮
+                    <div class="actions-menu">
+                        <div>View details</div>
+                        <div>Generate report</div>
+                        <div>Hide candidate</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>#R002</td>
+                <td>Tan Ke Yu</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80/100</td>
+                <td class="actions">⋮
+                    <div class="actions-menu">
+                        <div>View details</div>
+                        <div>Generate report</div>
+                        <div>Hide candidate</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>#R003</td>
+                <td>Alvin Lew Xiu Zheng</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>- /100</td>
+                <td class="actions">⋮
+                    <div class="actions-menu">
+                        <div>View details</div>
+                        <div>Generate report</div>
+                        <div>Hide candidate</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <h2>IT Manager Interview</h2>
+        <table>
+            <tr>
+                <th>Recruiter Id</th>
+                <th>Name</th>
+                <th>A1</th>
+                <th>A2</th>
+                <th>A3</th>
+                <th>A4</th>
+                <th>A5</th>
+                <th>Final mark</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>#R001</td>
+                <td>Emilia Tseng Tsu Yu</td>
+                <td>85</td>
+                <td>85</td>
+                <td>85</td>
+                <td>85</td>
+                <td>85</td>
+                <td>85/100</td>
+                <td class="actions">⋮
+                    <div class="actions-menu">
+                        <div>View details</div>
+                        <div>Generate report</div>
+                        <div>Hide candidate</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>#R002</td>
+                <td>Tan Ke Yu</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80/100</td>
+                <td class="actions">⋮
+                    <div class="actions-menu">
+                        <div>View details</div>
+                        <div>Generate report</div>
+                        <div>Hide candidate</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>#R003</td>
+                <td>Alvin Lew Xiu Zheng</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>- /100</td>
+                <td class="actions">⋮
+                    <div class="actions-menu">
+                        <div>View details</div>
+                        <div>Generate report</div>
+                        <div>Hide candidate</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

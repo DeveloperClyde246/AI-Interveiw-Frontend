@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .navbar {
+            background-color: #00f5ff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar h1 {
+            margin: 0;
+        }
+        .breadcrumb {
+            margin: 10px;
+            font-size: 14px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .section {
+            border: 1px solid black;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .section-title {
+            font-weight: bold;
+            background: #d3d3d3;
+            padding: 5px;
+        }
+        .interview-session {
+            padding: 10px;
+        }
+        .session-orange {
+            background: orange;
+            padding: 5px;
+        }
+        .session-green {
+            background: limegreen;
+            padding: 5px;
+        }
+        .notification {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .notification-item {
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+        }
+        .delete-btn {
+            float: right;
+            background: #ccc;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>GIT Interview</h1>
+    </div>
+    <div class="breadcrumb">
+        <a href="#">Home</a> > <a href="#">Dashboard</a>
+    </div>
+    <div class="container">
+        <div class="section">
+            <div class="section-title">Upcoming interview</div>
+            <div>Software developer technical interview</div>
+            <small>Completion Deadline: 20/12/2024 Duration: 1 hour</small>
+            <div>Software developer physical interview</div>
+            <small>Date: 23/12/2024 Time: 2:00pm to 3:00pm</small>
+        </div>
+        <div class="section">
+            <div class="section-title">Interview Session Handled</div>
+            <div class="session-orange">Software developer interview session</div>
+            <div class="session-green">IT manager interview session</div>
+        </div>
+        <div class="notification">
+            <div class="section-title">Notification <button class="delete-btn">Delete</button></div>
+            <div class="notification-item"><input type="checkbox" checked> Candidate Tan Ke Yu has accepted your “Software developer technical interview session” invitation...</div>
+            <div class="notification-item"><input type="checkbox"> Candidate Tan Ke Yu has completed Software developer technical interview.</div>
+        </div>
+    </div>
+</body>
+</html>

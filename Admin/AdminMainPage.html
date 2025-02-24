@@ -3,113 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIT Interview System</title>
-    <link rel="stylesheet" href="AdminMainPage.css">
+    <title>Admin Main Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: cyan;
+            padding: 15px;
+            text-align: left;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+        }
+        .button-container {
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: cyan;
+            border: 1px solid black;
+            padding: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        .action-menu {
+            position: relative;
+            display: inline-block;
+        }
+        .action-menu button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: white;
+            border: 1px solid black;
+            min-width: 120px;
+            right: 0;
+            z-index: 1;
+        }
+        .dropdown a {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            color: black;
+        }
+        .dropdown a:hover {
+            background: lightgray;
+        }
+        .action-menu:hover .dropdown {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <h1>GIT Interview System</h1>
 
-    <button onclick="viewProfile()">View profile</button>
-    <button onclick="createRecruiterAccount()">Creating new recruiter account</button>
-    <button onclick="deleteAccount()">Delete account</button>
+    <div class="header">GIT Interview System</div>
 
-    <h2>Existing recruiter account</h2>
-    <table>
-        <tr>
-            <th>Recruiter id</th>
-            <th>Name</th>
-            <th>Job title</th>
-            <th>Contact number</th>
-            <th>Email</th>
-            <th>Date created</th>
-            <th> </th>
-        </tr>
-        <tr>
-            <td>#R001</td>
-            <td>Emilia Tseng Tsu Yu</td>
-            <td>HR lead</td>
-            <td>601746253727</td>
-            <td>asdf@gmail.com</td>
-            <td>01/03/2018</td>
-            <td><button onclick="deleteAccount()">info</button></td>
-        </tr>
-        <tr>
-            <td>#R002</td>
-            <td>Alvin Lee Ze Ting</td>
-            <td>Junior HR</td>
-            <td>601246253727</td>
-            <td>asdfa@gmail.com</td>
-            <td>01/03/2020</td>
-            <td><button onclick="deleteAccount()">info</button></td>
-        </tr>
-        <tr>
-            <td>#R003</td>
-            <td>Tan Ke Yu</td>
-            <td>HR lead</td>
-            <td>601746433727</td>
-            <td>asdfsd@gmail.com</td>
-            <td>01/03/2017</td>
-            <td><button onclick="deleteAccount()">info</button></td>
-        </tr>
-    </table>
+    <div class="container">
+        <div class="button-container">
+            <button class="button">Create new recruiter account</button>
+        </div>
 
-    <h2>Existing candidate account</h2>
-    <table>
-        <tr>
-            <th>Recruiter id</th>
-            <th>Name</th>
-            <th>Job Applied</th>
-            <th>Contact number</th>
-            <th>Email</th>
-            <th>Date created</th>
-            <th> </th>
+        <h3>Existing recruiter account</h3>
+        <table>
+            <tr>
+                <th>Recruiter Id</th>
+                <th>Name</th>
+                <th>Job title</th>
+                <th>Contact number</th>
+                <th>Email</th>
+                <th>Date created</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>#R001</td>
+                <td>Emilia Tseng Tsu Yu</td>
+                <td>HR lead</td>
+                <td>601746253727</td>
+                <td>asdf@gmail.com</td>
+                <td>01/03/2018</td>
+                <td>
+                    <div class="action-menu">
+                        <button>⋮</button>
+                        <div class="dropdown">
+                            <a href="#">View details</a>
+                            <a href="#">Delete account</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>#R002</td>
+                <td>Alvin Lee Ze Ting</td>
+                <td>Junior HR</td>
+                <td>601246253727</td>
+                <td>asdfa@gmail.com</td>
+                <td>01/03/2018</td>
+                <td>
+                    <div class="action-menu">
+                        <button>⋮</button>
+                        <div class="dropdown">
+                            <a href="#">View details</a>
+                            <a href="#">Delete account</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>#R003</td>
+                <td>Tan Ke Yu</td>
+                <td>HR lead</td>
+                <td>601746433727</td>
+                <td>asdfsd@gmail.com</td>
+                <td>01/03/2017</td>
+                <td>
+                    <div class="action-menu">
+                        <button>⋮</button>
+                        <div class="dropdown">
+                            <a href="#">View details</a>
+                            <a href="#">Delete account</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
 
-        </tr>
-        <tr>
-            <td>#R001</td>
-            <td>John</td>
-            <td>Software engineer</td>
-            <td>601746253727</td>
-            <td>asdf@gmail.com</td>
-            <td>01/03/2018</td>
-            <td><button onclick="deleteAccount()">info</button></td>
-        </tr>
-        <tr>
-            <td>#R002</td>
-            <td>Alvin</td>
-            <td>Web developer</td>
-            <td>601246253727</td>
-            <td>asdfa@gmail.com</td>
-            <td>01/03/2020</td>
-            <td><button onclick="deleteAccount()">info</button></td>
-        </tr>
-        <tr>
-            <td>#R003</td>
-            <td>Tan Ke Yu</td>
-            <td>IT manager</td>
-            <td>601746433727</td>
-            <td>asdfsd@gmail.com</td>
-            <td>01/03/2017</td>
-            <td><button onclick="deleteAccount()">info</button></td>
-        </tr>
-    </table>
+        <h3>Existing candidate account</h3>
+        <table>
+            <tr>
+                <th>Recruiter Id</th>
+                <th>Name</th>
+                <th>Job Applied</th>
+                <th>Contact number</th>
+                <th>Email</th>
+                <th>Date created</th>
+            </tr>
+            <tr>
+                <td>#R001</td>
+                <td>John</td>
+                <td>Software engineer</td>
+                <td>601746253727</td>
+                <td>asdf@gmail.com</td>
+                <td>01/03/2018</td>
+            </tr>
+            <tr>
+                <td>#R002</td>
+                <td>Alvin</td>
+                <td>Web developer</td>
+                <td>601246253727</td>
+                <td>asdfa@gmail.com</td>
+                <td>01/03/2020</td>
+            </tr>
+            <tr>
+                <td>#R003</td>
+                <td>Tan Ke Yu</td>
+                <td>IT manager</td>
+                <td>601746433727</td>
+                <td>asdfsd@gmail.com</td>
+                <td>01/03/2017</td>
+            </tr>
+        </table>
+    </div>
 
-    <script>
-        function viewProfile() {
-            alert("Creating new recruiter account...");
-            // Add functionality here
-        }
-
-
-        function createRecruiterAccount() {
-            alert("Creating new recruiter account...");
-            // Add functionality here
-        }
-
-        function deleteAccount() {
-            alert("Deleting account...");
-            // Add functionality here
-        }
-    </script>
 </body>
 </html>
